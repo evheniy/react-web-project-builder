@@ -1,6 +1,6 @@
 # React Wep Project Building
 
-Read more https://medium.com/@evheniybystrov/react-web-project-building-5e9cc4ff54da
+Read more https://hackernoon.com/react-web-project-building-5e9cc4ff54da
 
 ******
 
