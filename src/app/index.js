@@ -1,24 +1,17 @@
-import React, { StrictMode, Suspense } from 'react';
-import { ErrorBoundary, FallbackView } from 'react-error-boundaries';
-import { Provider } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { compose } from './helpers';
 
-import store from '../store';
+import strictMode from './hocs/strictMode';
+import errorBoundary from './hocs/errorBoundary';
+import redux from './hocs/redux';
+import router from './hocs/router';
+import suspense from './hocs/suspense';
 
-const AppKernel = (Component) => {
-    return () => (
-        <StrictMode>
-            <ErrorBoundary FallbackComponent={FallbackView}>
-                <Provider store={store}>
-                    <Router>
-                        <Suspense fallback={<div>Loading...</div>}>
-                            <Component />
-                        </Suspense>
-                    </Router>
-                </Provider>
-            </ErrorBoundary>
-        </StrictMode>
-    );
-};
+const AppKernel = compose(
+    strictMode,
+    errorBoundary,
+    redux,
+    router,
+    suspense,
+);
 
 export default AppKernel;
