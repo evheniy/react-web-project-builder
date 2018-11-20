@@ -2,6 +2,8 @@
 
 Read more https://hackernoon.com/react-web-project-building-5e9cc4ff54da
 
+Part 2: https://medium.com/@evheniybystrov/react-web-project-building-part-2-hocs-4416f4721168
+
 ******
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

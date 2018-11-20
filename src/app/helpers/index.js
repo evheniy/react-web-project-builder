@@ -16,7 +16,7 @@ const hocCreator = (WrapperComponent, wrapperProps, Component) => {
       ? wrapper(WrapperComponent, wrapperProps, Component)
       : Cmp => {
           if (!Cmp) {
-              throw new Error('Component should nbee set!');
+              throw new Error('Component should be set!');
           }
 
           return wrapper(WrapperComponent, wrapperProps, Cmp);
